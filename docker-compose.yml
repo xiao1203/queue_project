@@ -1,0 +1,29 @@
+version: '3'
+services:
+  golang:
+    build: ./golang
+    environment:
+      - REDIS_URL=redis:6379
+    depends_on:
+      - redis
+
+  rails:
+    build: ./rails_app
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:alpine
+    ports:
+      - '6379:6379'
+
+  sidekiq:
+    build: ./rails_app
+    command: bundle exec sidekiq
+    environment:
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - redis
+      - rails

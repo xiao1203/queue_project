@@ -1,0 +1,74 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore pidfiles, but keep the directory.
+/tmp/pids/*
+!/tmp/pids/
+!/tmp/pids/.keep
+
+# Ignore uploaded files in development.
+/storage/*
+!/storage/.keep
+/tmp/storage/*
+!/tmp/storage/
+!/tmp/storage/.keep
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+# Ignore other unnecessary files
+*.log
+*.swp
+.DS_Store
+.env
+.env.*
+
+# Ignore database configuration
+/config/database.yml
+
+# Ignore all .rb files in the lib directory
+/lib/**/*.rb
+
+# Ignore all .erb files in the app/views directory
+/app/views/**/*.erb
+
+# Ignore Bootsnap cache
+/tmp/cache/bootsnap*
+
+# Ignore node modules
+/node_modules
+
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore coverage reports
+/coverage
+
+# Ignore public uploads
+/public/uploads
+
+# Ignore precompiled assets
+/public/assets
+
+# Ignore Rubocop cache
+.rubocop-*
+
+# Ignore Spring files
+/spring/*.pid
+
+# Ignore dotenv files
+.env*
+
+# Ignore Rubymine project files
+.idea
+
+# Ignore VSCode files
+.vscode
